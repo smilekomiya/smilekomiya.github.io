@@ -4,7 +4,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         function check() {
-            var myString = "something format_abc";
+            var string = document.getElementById("main_area").value;
+            console.log(string);
             var myRegexp = /(?:^|\s)format_(.*?)(?:\s|$)/g;
             var match = myRegexp.exec(myString);
             while (match != null) {
@@ -18,7 +19,7 @@
     </script>
 </head>
 <body>
-    <textarea name="kanso" rows="10" cols="100"></textarea>
+    <textarea name="textarea" id="main_area" rows="10" cols="100"></textarea>
     <input type="button" value="チェック！" onclick="check()">
 </body>
 </html>
