@@ -22,20 +22,68 @@
                     $('div.roulette').roulette('stop');
                 });
             });
-     </script>
+        </script>
+    <style type="text/css">
+        body {
+            background-image: url('./jobot.png');
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        .roulette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            /*min-height: 100%;*/
+            max-width: inherit;
+        }
+        .roulette img {
+            width: 100%;
+        }
+        .buttons {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            width: 1000px;
+            margin-left: -500px;
+        }
+        .start {
+            border-radius: 100px;
+            height: 200px;
+            width: 200px;
+            font-size: 40px;
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 0 10px 20px white;
+        }
+        .stop {
+            border-radius: 100px;
+            height: 200px;
+            width: 200px;
+            font-size: 40px;
+            padding: 20px;
+            margin-left: 20px;
+            box-shadow: 0 0 10px 20px white;
+        }
+    </style>
     </head>
     <body>
         <div class="container">
-            <div class="roulette" style="display:none; text-align: center;">
+            <div class="roulette">
                 <img src="./makebig.jpg">
                 <img src="./fun.jpg">
                 <img src="./empower.jpg">
                 <img src="./userfirst.jpg">
             </div>
-            <div>
+            <div class="buttons">
                 <p style="text-align: center">
-                    <button class="btn btn-large btn-primary start"> スタート！ </button>
-                    <button class="stop btn-large btn btn-warning" onclick="GetRandomNumber();"> ストップ！ </button>
+                    <button class="start btn btn-large btn-primary start"> Start </button>
+                    <button class="stop stop btn-large btn btn-warning" onclick="GetRandomNumber();"> Stop </button>
                 </p>
             </div>
         </div>
