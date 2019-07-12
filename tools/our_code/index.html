@@ -77,9 +77,19 @@
             z-index: 10;
         }
 
-        .kurunyan > img {
+        .kurunyan > img.baloon {
             width: 200px;
+            animation: img_box_9955 3s linear infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0 !important;
         }
+
+        @keyframes img_box_9955 {
+  0% { transform: translateY(0) }
+  33.33333% { transform: translateY(-10px) }
+  66.66667% { transform: translateY(0) }
+  100% { transform: translateY(0) }
+}
 
         .jobot_clear {
             position: absolute;
@@ -97,7 +107,7 @@
     <body>
         <div class="container">
             <div class="kurunyan">
-                <img src="./kurunyan.png">
+                <img src="./kurunyan.png" class="baloon">
             </div>
             <div class="jobot_clear">
                 <img src="./jobot_clear.png">
